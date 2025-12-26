@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teknologjitë e Përdorura në Projektin e Diplomës</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 300;
+        }
+        .content {
+            padding: 40px;
+        }
+        
+        /* Tabela Stilizuar */
+        .table-container {
+            margin-bottom: 50px;
+            overflow-x: auto;
+        }
+        .tech-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .tech-table th {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .tech-table td {
+            padding: 15px 20px;
+            border-bottom: 1px solid #f1f1f1;
+            vertical-align: top;
+        }
+        .tech-table tr:hover {
+            background: rgba(102, 126, 234, 0.05);
+            transform: scale(1.01);
+            transition: all 0.3s ease;
+        }
+        .tech-name {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        .tech-description {
+            color: #7f8c8d;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        .category-frontend {
+            border-left: 5px solid #e74c3c;
+        }
+        .category-backend {
+            border-left: 5px solid #3498db;
+        }
+        .category-security {
+            border-left: 5px solid #f39c12;
+        }
+        .category-validation {
+            border-left: 5px solid #2ecc71;
+        }
+        .category-communication {
+            border-left: 5px solid #9b59b6;
+        }
+        .category-development {
+            border-left: 5px solid #1abc9c;
+        }
+        
+        /* Grafiku Vizual */
+        .chart-container {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .chart-title {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        .tech-stack-visual {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .tech-layer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 200px;
+        }
+        .layer-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        .tech-box {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 25px;
+            margin: 5px;
+            border-radius: 25px;
+            font-weight: 500;
+            min-width: 120px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+            transition: all 0.3s ease;
+        }
+        .tech-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+        .frontend-box {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+        }
+        .backend-box {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+        }
+        .database-box {
+            background: linear-gradient(135deg, #f39c12, #d35400);
+        }
+        .library-box {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+        }
+        
+        /* Statistikat */
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        .stat-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Teknologjitë e Përdorura në Platformën e Këshillimit të Karrierës</h1>
+        </div>
+        
+        <div class="content">
+            <!-- Statistikat -->
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Biblioteka të Përdorura</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Kategori Teknologjish</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Gjuhë Programimi</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">Stack i Integruar</div>
+                </div>
+            </div>
+            
+            <!-- Tabela e Teknologjive -->
+            <div class="table-container">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Kategoria</th>
+                            <th>Teknologjia/Biblioteka</th>
+                            <th>Përshkrimi dhe Përdorimi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="category-frontend">
+                            <td rowspan="4"><strong>Frontend</strong></td>
+                            <td><div class="tech-name">React.js</div></td>
+                            <td><div class="tech-description">Framework kryesor për ndërtimin e ndërfaqes së përdoruesit dhe komponentëve interaktivë</div></td>
+                        </tr>
+                        <tr class="category-frontend">
+                            <td><div class="tech-name">HTML</div></td>
+                            <td><div class="tech-description">Struktura bazë e faqeve të platformës dhe organizimi i përmbajtjes</div></td>
+                        </tr>
+                        <tr class="category-frontend">
+                            <td><div class="tech-name">CSS</div></td>
+                            <td><div class="tech-description">Stilizimi dhe dizajni i platformës, responsive design</div></td>
+                        </tr>
+                        <tr class="category-frontend">
+                            <td><div class="tech-name">JavaScript</div></td>
+                            <td><div class="tech-description">Logjika interaktive e frontend-it dhe komunikimi me backend</div></td>
+                        </tr>
+                        
+                        <tr class="category-backend">
+                            <td rowspan="4"><strong>Backend Core</strong></td>
+                            <td><div class="tech-name">Node.js</div></td>
+                            <td><div class="tech-description">Runtime environment për JavaScript në server</div></td>
+                        </tr>
+                        <tr class="category-backend">
+                            <td><div class="tech-name">Express.js</div></td>
+                            <td><div class="tech-description">Framework për ndërtimin e API-ve dhe menaxhimin e route-ave</div></td>
+                        </tr>
+                        <tr class="category-backend">
+                            <td><div class="tech-name">Oracle Database</div></td>
+                            <td><div class="tech-description">Ruajtja dhe menaxhimi i të dhënave komplekse të platformës</div></td>
+                        </tr>
+                        <tr class="category-backend">
+                            <td><div class="tech-name">oracledb</div></td>
+                            <td><div class="tech-description">Driver për komunikimin midis Node.js dhe Oracle Database</div></td>
+                        </tr>
+                        
+                        <tr class="category-security">
+                            <td rowspan="5"><strong>Siguria</strong></td>
+                            <td><div class="tech-name">bcryptjs</div></td>
+                            <td><div class="tech-description">Enkriptimi i sigurt i fjalëkalimeve të përdoruesve</div></td>
+                        </tr>
+                        <tr class="category-security">
+                            <td><div class="tech-name">jsonwebtoken (JWT)</div></td>
+                            <td><div class="tech-description">Autentifikimi modern përmes token-ave të sigurt</div></td>
+                        </tr>
+                        <tr class="category-security">
+                            <td><div class="tech-name">helmet</div></td>
+                            <td><div class="tech-description">Mbrojtje e HTTP headers kundër sulmeve web</div></td>
+                        </tr>
+                        <tr class="category-security">
+                            <td><div class="tech-name">express-rate-limit</div></td>
+                            <td><div class="tech-description">Kufizimi i kërkesave për të parandaluar sulmet</div></td>
+                        </tr>
+                        <tr class="category-security">
+                            <td><div class="tech-name">cors</div></td>
+                            <td><div class="tech-description">Komunikim i sigurt midis domain-eve të ndryshme</div></td>
+                        </tr>
+                        
+                        <tr class="category-validation">
+                            <td rowspan="3"><strong>Validimi & Data</strong></td>
+                            <td><div class="tech-name">express-validator</div></td>
+                            <td><div class="tech-description">Validimi i të dhënave të hyrëse nga përdoruesit</div></td>
+                        </tr>
+                        <tr class="category-validation">
+                            <td><div class="tech-name">multer</div></td>
+                            <td><div class="tech-description">Upload-i i dokumenteve dhe file-ave nga përdoruesit</div></td>
+                        </tr>
+                        <tr class="category-validation">
+                            <td><div class="tech-name">dotenv</div></td>
+                            <td><div class="tech-description">Menaxhimi i sigurt i konfiguracioneve të mjedisit</div></td>
+                        </tr>
+                        
+                        <tr class="category-communication">
+                            <td rowspan="3"><strong>Komunikimi</strong></td>
+                            <td><div class="tech-name">socket.io</div></td>
+                            <td><div class="tech-description">Chat në kohë reale midis studentëve dhe këshilluesve</div></td>
+                        </tr>
+                        <tr class="category-communication">
+                            <td><div class="tech-name">nodemailer</div></td>
+                            <td><div class="tech-description">Sistemi i email-ave për njoftimet dhe konfirmimet</div></td>
+                        </tr>
+                        <tr class="category-communication">
+                            <td><div class="tech-name">axios</div></td>
+                            <td><div class="tech-description">HTTP requests midis frontend dhe backend</div></td>
+                        </tr>
+                        
+                        <tr class="category-development">
+                            <td rowspan="2"><strong>Zhvillimi</strong></td>
+                            <td><div class="tech-name">nodemon</div></td>
+                            <td><div class="tech-description">Auto-restart i serverit gjatë development-it</div></td>
+                        </tr>
+                        <tr class="category-development">
+                            <td><div class="tech-name">jest</div></td>
+                            <td><div class="tech-description">Framework për testing dhe sigurimin e cilësisë së kodit</div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            
+            <div class="chart-container">
+                <h2 class="chart-title">Arkitektura e Stack-ut Teknologjik</h2>
+                <div class="tech-stack-visual">
+                    <div class="tech-layer">
+                        <div class="layer-title">Frontend Layer</div>
+                        <div class="tech-box frontend-box">React.js</div>
+                        <div class="tech-box frontend-box">HTML/CSS</div>
+                        <div class="tech-box frontend-box">JavaScript</div>
+                    </div>
+                    
+                    <div class="tech-layer">
+                        <div class="layer-title">Backend Layer</div>
+                        <div class="tech-box backend-box">Node.js</div>
+                        <div class="tech-box backend-box">Express.js</div>
+                        <div class="tech-box backend-box">REST APIs</div>
+                    </div>
+                    
+                    <div class="tech-layer">
+                        <div class="layer-title">Database Layer</div>
+                        <div class="tech-box database-box">Oracle DB</div>
+                        <div class="tech-box database-box">oracledb</div>
+                        <div class="tech-box database-box">SQL Queries</div>
+                    </div>
+                    
+                    <div class="tech-layer">
+                        <div class="layer-title">Support Libraries</div>
+                        <div class="tech-box library-box">Security</div>
+                        <div class="tech-box library-box">Validation</div>
+                        <div class="tech-box library-box">Communication</div>
+                        <div class="tech-box library-box">Development</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
